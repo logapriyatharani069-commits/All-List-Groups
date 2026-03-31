@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>All List Groups</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f9;
+  padding: 30px;
+}
+
+h2 {
+  margin-top: 40px;
+}
+
+/* Common */
+.list-group {
+  width: 300px;
+  margin-bottom: 20px;
+}
+
+.list-group li {
+  list-style: none;
+  padding: 12px;
+  border: 1px solid #ddd;
+  background: #fff;
+}
+
+/* Active */
+.active {
+  background: #4facfe;
+  color: white;
+}
+
+/* Disabled */
+.disabled {
+  color: #aaa;
+}
+
+/* Hover */
+.hover li:hover {
+  background: #4facfe;
+  color: white;
+  cursor: pointer;
+}
+
+/* Flush */
+.flush li {
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Numbered */
+.numbered li {
+  counter-increment: step;
+}
+.numbered li::before {
+  content: counter(step) ". ";
+  font-weight: bold;
+}
+
+/* Badges */
+.badge {
+  float: right;
+  background: #4facfe;
+  color: white;
+  padding: 3px 8px;
+  border-radius: 10px;
+}
+
+/* Horizontal */
+.horizontal {
+  display: flex;
+}
+.horizontal li {
+  flex: 1;
+  text-align: center;
+}
+
+/* Gradient */
+.gradient li {
+  background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+  margin-bottom: 5px;
+  border: none;
+}
+
+/* Glass */
+.glass {
+  backdrop-filter: blur(10px);
+  background: rgba(255,255,255,0.3);
+  padding: 10px;
+  border-radius: 10px;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>📋 List Group Collection</h1>
+
+<!-- Basic -->
+<h2>Basic List</h2>
+<ul class="list-group">
+  <li>Item One</li>
+  <li>Item Two</li>
+  <li>Item Three</li>
+</ul>
+
+<!-- Active & Disabled -->
+<h2>Active & Disabled</h2>
+<ul class="list-group">
+  <li class="active">Active Item</li>
+  <li>Normal Item</li>
+  <li class="disabled">Disabled Item</li>
+</ul>
+
+<!-- Hover -->
+<h2>Hover List</h2>
+<ul class="list-group hover">
+  <li>Hover Me</li>
+  <li>Hover Me</li>
+  <li>Hover Me</li>
+</ul>
+
+<!-- Flush -->
+<h2>Flush List</h2>
+<ul class="list-group flush">
+  <li>Item One</li>
+  <li>Item Two</li>
+  <li>Item Three</li>
+</ul>
+
+<!-- Numbered -->
+<h2>Numbered List</h2>
+<ul class="list-group numbered">
+  <li>Step One</li>
+  <li>Step Two</li>
+  <li>Step Three</li>
+</ul>
+
+<!-- Badges -->
+<h2>List with Badges</h2>
+<ul class="list-group">
+  <li>Inbox <span class="badge">5</span></li>
+  <li>Messages <span class="badge">2</span></li>
+  <li>Notifications <span class="badge">7</span></li>
+</ul>
+
+<!-- Horizontal -->
+<h2>Horizontal List</h2>
+<ul class="list-group horizontal">
+  <li>Home</li>
+  <li>About</li>
+  <li>Contact</li>
+</ul>
+
+<!-- Gradient -->
+<h2>Gradient List</h2>
+<ul class="list-group gradient">
+  <li>Creative Item</li>
+  <li>Creative Item</li>
+  <li>Creative Item</li>
+</ul>
+
+<!-- Glass -->
+<h2>Glassmorphism List</h2>
+<div class="glass">
+  <ul class="list-group">
+    <li>Glass Item</li>
+    <li>Glass Item</li>
+    <li>Glass Item</li>
+  </ul>
+</div>
+
+</body>
+</html>
